@@ -1,22 +1,10 @@
 <?php
 session_start();
 
-// Database connection parameters
-$servername = "localhost";
-$username = "root"; // Default XAMPP username
-$password = ""; // Default XAMPP password (usually empty)
-$dbname = "personal_data_db"; // Your database name
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Get the ID from the URL
-$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+require 'config.php';
+require 'conf.php';
+require 'get_id.php';
 
 // Fetch the specific data based on the ID
 $sql = "SELECT * FROM personal_data WHERE id = $id"; // Adjust the query based on your needs

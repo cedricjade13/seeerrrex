@@ -14,10 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Database connection parameters
-$servername = "localhost";
-$username = "root"; // Default XAMPP username
-$password = ""; // Default XAMPP password (usually empty)
-$dbname = "personal_data_db"; // Your database name
+require 'config.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -43,6 +40,6 @@ if (!$stmt->execute()) {
 $stmt->close();
 $conn->close();
 
-header("Location: dashboard.php"); // Redirect back to the dashboard
+header("Location: index.php"); // Redirect back to the dashboard
 exit;
 ?>

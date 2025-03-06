@@ -2,10 +2,7 @@
 session_start();
 
 // Database connection parameters
-$servername = "localhost";
-$username = "root"; // Default XAMPP username
-$password = ""; // Default XAMPP password (usually empty)
-$dbname = "personal_data_db"; // Your database name
+require 'config.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -399,7 +396,7 @@ $result = $conn->query($sql);
         </div>
 
         <div class="button">
-            <button type="button" onclick="window.location.href='dashboard.php'">Proceed</button>
+            <button type="button" onclick="window.location.href='index.php'">Proceed</button>
         </div>
 
     <?php else: ?>
