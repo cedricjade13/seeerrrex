@@ -1,0 +1,258 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1000px; /* Increase the width of the container */
+    width: 100%; /* Full width on smaller screens */
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    margin: 10px 0;
+    font-size: 50px;
+    font-family: "Sigmar", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.section {
+    margin: 20px 0; /* Space between sections */
+    border: 1px solid rgb(22, 22, 22); /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside the section */
+    position: relative; /* Position relative for absolute positioning of the heading */
+}
+
+.section h3 {
+    color: rgb(0, 0, 0);
+    position: relative; /* Use relative positioning */
+    top: 0; /* Reset top to 0 to avoid overlap */
+    left: 10px; /* Align the heading with the left padding of the section */
+    font-size: 25px; /* Adjust font size if needed */          
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.data-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    margin: 0; /* Remove margin to occupy all available space */
+    padding: 0; /* Optional: Remove padding if needed */
+    width: 100%; /* Ensure it occupies the full width of the parent */
+}
+
+.data-item {
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, and basis for responsive layout */
+    margin: 5px; /* Space between items */
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(32, 30, 30); /* Text color */
+    font-size: 16px; /* Set the font size */
+    font-weight: normal; /* Set the font weight (normal, bold, etc.) */
+    line-height: 1.5; /* Optional: Adjust line height for better readability */
+    font-family: "Didact Gothic", serif; /* Font family */
+}
+
+strong {
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 0, 0); /* Color for emphasis */
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    color: rgb(0, 0, 0); /* Color for subheadings */
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.names {
+    color: rgb(0, 0, 0); /* Color for subheadings */
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+button {
+    background-color: #ff0000; /* Green background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for top/bottom and left/right */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for proper spacing */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin for spacing */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: rgb(189, 20, 20); /* Darker red on hover */
+}
+
+input[type="date"] {
+    width: 100%; /* Full width */
+    max-width: 250px; /* Maximum width */
+    padding: 10px; /* Padding inside the input */
+    border: 2px solid #0f0e0e; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    background-color: #f9f9f9; /* Light background color */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
+}
+
+input[type="date"]::placeholder {
+    color: #aaa; /* Placeholder text color */
+    opacity: 1; /* Ensure full opacity */
+}
+
+input[type="date"]:focus {
+    border-color: #ff0000; /* Darker green border on focus */
+    box-shadow: 0 0 5px rgba(29, 31, 30, 0.5); /* Shadow effect on focus */
+    outline: none; /* Remove default outline */
+}
+
+input[type="email"] {
+    width: 100%; /* Full width */
+    max-width: 250px; /* Maximum width */
+    padding: 10px; /* Padding inside the input */
+    border: 2px solid #0f0e0e; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    background-color: #f9f9f9; /* Light background color */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
+}
+
+input[type="email"]::placeholder {
+    color: #aaa; /* Placeholder text color */
+    opacity: 1; /* Ensure full opacity */
+}
+
+input[type="email"]:focus {
+    border-color: #ff0000; /* Darker green border on focus */
+    outline: none; /* Remove default outline */
+}
+
+input[type="text"] {
+    width: 100%; /* Full width */
+    max-width: 250px; /* Maximum width */
+    padding: 10px; /* Padding inside the input */
+    border: 2px solid #0f0e0e; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    background-color: #f9f9f9; /* Light background color */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
+}
+
+input[type="text"]::placeholder {
+    color: #aaa; /* Placeholder text color */
+    opacity: 1; /* Ensure full opacity */
+}
+
+input[type="text"]:focus {
+    border-color: #ff0000; /* Darker green border on focus */
+    outline: none; /* Remove default outline */
+}
+
+input[type="text"]:hover {
+    border-color: #ff0000; /* Darker green border on hover */
+}
+
+input[type="email"]:hover {
+    border-color: #ff0000; /* Darker green border on hover */
+}
+
+input[type="date"]:hover {
+    border-color: #ff0000; /* Darker green border on hover */
+}
+
+.ocv{
+    margin-top: 5px;
+}
+
+select {
+    width: 100%; /* Full width */
+    max-width: 275px; /* Maximum width */
+    padding: 10px; /* Padding inside the select */
+    border: 2px solid #0f0e0e; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    background-color: #f9f9f9; /* Light background color */
+    appearance: none; /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="%234CAF50"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat; /* No repeat */
+    background-position: right 10px center; /* Position the arrow */
+    background-size: 10px; /* Size of the arrow */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
+}
+
+select:focus {
+    border-color: #ff0000; /* Darker green border on focus */
+    outline: none; /* Remove default outline */
+}
+
+select:hover {
+    border-color: #ff0000; /* Darker green border on hover */
+}
+
+.fa-user, .fa-hospital, .fa-house, .fa-address-card {
+    display: flex;
+    padding-right: 20px;
+    font-size: 25px;
+    color: black;
+}
+
+@media (max-width: 800px) {
+    .data-item {
+        flex: 1 1 45%; /* Adjust item width for medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .data-item {
+        flex: 1 1 100%; /* Stack items vertically on small screens */
+    }
+}
